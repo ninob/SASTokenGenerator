@@ -60,8 +60,8 @@ namespace SASTokenCreator.CLI
                 _expiryPeriod = expiryPeriod.Value;
             }
 
-            TokenGenerator tg = new TokenGenerator();
-            string sasToken = tg.CreateServiceBusSASToken(_resourceUri, _keyName, _key, _expiryPeriod);
+            TokenGenerator tokenGenerator = new TokenGenerator();
+            string sasToken = tokenGenerator.CreateServiceBusSASToken(_resourceUri, _keyName, _key, _expiryPeriod);
 
             if (args.Length > 0)
             {
